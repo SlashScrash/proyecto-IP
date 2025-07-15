@@ -186,10 +186,10 @@ def contar_recursiva(matriz, i, minimo, buses, lineas):
     total = 0
     for j in range(lineas):  
         total += matriz[i][j]
-        if total >= minimo:
-            return 1 + contar_recursiva(matriz, i + 1, minimo, buses, lineas)
-        else:
-            return contar_recursiva(matriz, i + 1, minimo, buses, lineas)
+    if total >= minimo:
+        return 1 + contar_recursiva(matriz, i + 1, minimo, buses, lineas)
+    else:
+        return contar_recursiva(matriz, i + 1, minimo, buses, lineas)
 
 
 # ---------------------------
